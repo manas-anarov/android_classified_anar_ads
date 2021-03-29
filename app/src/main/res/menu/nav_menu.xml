@@ -4,9 +4,16 @@
         android:id="@+id/fragment1"
         android:title="Section1"/>
     <item
-        android:id="@+id/fragment2"
-        android:title="Section2"/>
+        android:id="@+id/createContainer"
+        android:title="Create"/>
     <item
-        android:id="@+id/fragment3"
-        android:title="Section3"/>
+        android:id="@+id/categoryFragment"
+        android:title="Category"/>
+
+    <item
+        android:id="@+id/profileFragment"
+        android:title="Profile"/>
+    <item
+        android:id="@+id/accountsTab"
+        android:title="Accounts"/>
 </menu>

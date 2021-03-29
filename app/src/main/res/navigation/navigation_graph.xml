@@ -10,14 +10,61 @@
         android:name="com.example.anarads.Fragment1"
         android:label="fragment_1"
         tools:layout="@layout/fragment_1" />
+
     <fragment
-        android:id="@+id/fragment2"
-        android:name="com.example.anarads.Fragment2"
-        android:label="fragment_2"
-        tools:layout="@layout/fragment_2" />
+        android:id="@+id/createContainer"
+        android:name="com.example.anarads.create.CreateContainer"
+        android:label="CreateContainer"
+        tools:layout="@layout/create_container"/>
     <fragment
-        android:id="@+id/fragment3"
-        android:name="com.example.anarads.Fragment3"
-        android:label="fragment_3"
-        tools:layout="@layout/fragment_3" />
+        android:id="@+id/accountsTab"
+        android:name="AccountsTab"
+        android:label="AccountsTab" />
+    <fragment
+        android:id="@+id/categoryFragment"
+        android:name="com.example.anarads.category.CategoryFragment"
+        android:label="CategoryFragment" >
+        <action
+            android:id="@+id/action_categoryFragment_to_blankFragment"
+            app:destination="@id/blankFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/blankFragment"
+        android:name="com.example.anarads.detail.DetailFragment"
+        android:label="blank_fragment"
+        tools:layout="@layout/blank_fragment" >
+        <argument
+            android:name="PostId"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.anarads.profile.ProfileFragment"
+        android:label="ProfileFragment" >
+        <action
+            android:id="@+id/action_profileFragment_to_editCar"
+            app:destination="@id/editCar" />
+        <action
+            android:id="@+id/action_profileFragment_to_editPost"
+            app:destination="@id/editPost" />
+    </fragment>
+    <fragment
+        android:id="@+id/editCar"
+        android:name="com.example.anarads.edit.EditCar"
+        android:label="EditCar" >
+        <argument
+            android:name="PostId"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+    <fragment
+        android:id="@+id/editPost"
+        android:name="com.example.anarads.edit.EditPost"
+        android:label="EditPost" >
+        <argument
+            android:name="PostId"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
 </navigation>
